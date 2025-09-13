@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Shop App - Attractive Home</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+      padding-bottom: 70px;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 18px 0;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 25px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .product-card img {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .product-details {
+      padding: 15px 18px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .product-details h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #007bff;
+    }
+    .product-details p {
+      font-size: 0.9rem;
+      color: #495057;
+      margin-bottom: 12px;
+      flex-grow: 1;
+    }
+    .product-details button {
+      background-color: #28a745;
+      border: none;
+      color: white;
+      padding: 12px 0;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    .product-details button:hover {
+      background-color: #218838;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0; right: 0;
+      background: white;
+      box-shadow: 0 -1px 8px rgba(0,0,0,0.12);
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      z-index: 1000;
+    }
+    .bottom-nav button {
+      background: none;
+      border: none;
+      color: #007bff;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .bottom-nav button:hover {
+      color: #0056b3;
+    }
+    .bottom-nav button i {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 600px) {
+      .product-list {
+        gap: 15px;
+        padding: 20px 10px;
+      }
+      .product-card {
+        width: 100%;
+      }
+      header {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+  🛍️ My Shop App
+</header>
+
+<div class="product-list">
+  <div class="product-card" onclick="window.location.href='buy-now.html'">
+    <img src="https://images.unsplash.com/photo-1606813909373-420239de4de3?auto=format&fit=crop&w=800&q=80" alt="Product 1" />
+    <div class="product-details">
+      <h3>Stylish Sneakers</h3>
+      <p>Comfortable and trendy sneakers for everyday use.</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='buy-now.html'">
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80" alt="Product 2" />
+    <div class="product-details">
+      <h3>Smart Watch</h3>
+      <p>Stay connected and track your health with style.</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='buy-now.html'">
+    <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80" alt="Product 3" />
+    <div class="product-details">
+      <h3>Leather Wallet</h3>
+      <p>Elegant and durable wallet made from genuine leather.</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+
+  <div class="product-card" onclick="window.location.href='buy-now.html'">
+    <img src="https://images.unsplash.com/photo-1512499617640-c2f99994f4e7?auto=format&fit=crop&w=800&q=80" alt="Product 4" />
+    <div class="product-details">
+      <h3>Wireless Earbuds</h3>
+      <p>Experience high-quality sound without the wires.</p>
+      <button>Buy Now</button>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <button onclick="window.location.href='index.html'">
+    <i class="fas fa-home"></i>
+    Home
+  </button>
+  <button onclick="window.location.href='profile.html'">
+    <i class="fas fa-user"></i>
+    Profile
+  </button>
+  <button onclick="window.history.back()">
+    <i class="fas fa-arrow-left"></i>
+    Back
+  </button>
+</div>
+
+</body>
+</html>
